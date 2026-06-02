@@ -1,0 +1,56 @@
+# Intro to C++ — Student Introduction Survey
+
+*Welcome! Please take a few minutes to fill this out. Your responses help your instructor get to know you and tailor the course to your needs.*
+
+---
+
+## Section 1: About You
+
+1. What is your full name: Shahir 
+2. What is your major/Minor (or intended major): Computer Science
+3. Favorite snack: Peanuts
+4. Hobby/Favorite Pass time: Reading Japanese/Korean/Chinese Webnovels and youtube
+
+---
+
+## Section 2: Programming Experience
+
+5. Have you written code before in any language: Yesss
+6. If yes, which languages have you used? *(e.g., Python, Java, Scratch, etc.)*: Python
+7. How would you describe your overall programming experience so far?:
+   - [ ] No experience at all
+   - [x] A little (one course or self-taught basics)
+   - [ ] Some (a few projects or courses)
+   - [ ] Quite a bit (multiple languages or projects)
+8. Have you written any C++ code before: Yes only basic decisions and when loops
+9. Are you retaking this course or is this your first time: First time
+10. Do you enjoy coding? Do you enjoy CS so far? Why or why not: I'm pretty ambivalent. While problem solving isn't something I dislike, having to scour the internet to find solutions to every little thing isn't very enjoyable. Honestly though the main issue I find is that I keep loosing everything I learn.
+
+---
+
+## Section 3: Comfort with CS Concepts
+
+Rate your comfort level with each of the following *(1 = Never heard of it, 5 = Very comfortable)*:
+
+| Variables & data types: 3
+| Loops (for, while): 3
+| Conditionals (if/else): 4
+| Functions / methods:  2.5
+| Arrays / lists:  2
+| Memory & pointers: 1
+| Object-oriented programming: 2
+
+---
+
+## Section 4: Goals & Expectations
+
+10. What do you hope to get out of this course: Close to being ready for an internships and making cool programs
+11. Is there anything specific about C++ or programming you're excited to learn: Registries seem kinda cool if not a pain
+12. What are you most nervous or uncertain about going into this course:
+Coming out not knowing how to do any real programming outside of class
+13. How do you prefer to learn when something is difficult? *(e.g., watching videos, reading, asking questions, working with others, etc.)*: Asking questions is my go to. Specifically to people. I just dont like how theres too many options when your tryna learn something simple.
+14. Is there anything else you'd like your instructor to know about you: 
+
+---
+
+*Thank you for filling this out! I look forward to getting to know you.*
