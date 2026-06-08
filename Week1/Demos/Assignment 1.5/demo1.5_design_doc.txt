@@ -1,0 +1,8 @@
+Demo 1.5 Calculator is designed to be an internal prototype for testing.
+Its main goal is to test user input and see if it correctly handles calculations
+While this program is made for fellow developers, there have been made a few safegaurds.
+Namely: Checks for dividing by zero as thats methematically impossible and
+makes sure valid operators and digits are used in order to perform the calculations.
+It does not however consider inputs that may stylistically be different for instance an x instead of *
+This program is not intended for the end consumer and so does not consider every invalid input.
+Programmers are expected to use this program through the command line
