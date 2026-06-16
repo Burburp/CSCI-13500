@@ -1,0 +1,10 @@
+I had used Gemini to walk me through various ways I could parse the text
+including stringstream, .find(), isdigit() and substring. Ultimately I chose 
+stringstream for its simple implementation and that the input string was 
+only being parsed into two parts.
+
+I had also asked Gemini on how I could make a string lowercase
+I had it check for a bug that for some reason caused my program to skip cin 
+admittedly I had allowed the ai too look at my code when I asked the question
+Which for next time I'll remember not to do so plz dont dock points :(
+I also had it tell me how I could round
