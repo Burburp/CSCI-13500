@@ -82,7 +82,7 @@ void Determinant(const int matrix_local[][3], const int size) {
     determinant_value = matrix_local[0][0] * matrix_local[1][1] -
                         matrix_local[0][1] * matrix_local[1][0];
   }
-  // Calculates detriment for a 3x3 matrix
+  // Calculates determinant for a 3x3 matrix
   else if (num_of_cols == 3 && size == 3) {
     //increments accross every partial 2x2 matrix needed to calculate detriment
     for (int col = 0; col < num_of_cols; col++) {
@@ -116,7 +116,7 @@ void SearchValue(const int matrix_local[][3], const int rows,
     for (int col = 0; col < cols; col++){
       if (target == matrix_local[row][col]){
         found = true;
-        std::cout << "Found " << target << " at [" << row << "] [" <<  col << "]\n";
+        std::cout << "Found " << target << " at [" << row << "][" <<  col << "]\n";
       }
     }
   }
