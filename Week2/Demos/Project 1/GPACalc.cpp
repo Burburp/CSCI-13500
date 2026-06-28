@@ -43,8 +43,6 @@ int main() {
              "course credit and\nLetter_Grade is the letter grade you "
              "received for that class\nPossible letter grades are: A+, A, A-, "
              "B+, B, B-, C+, C, D, F, WU, FIN, FAB\n";
-      //clearing cin in case of buffer issues, gemini warned me
-      std::cin.ignore();
       std::getline(
           std::cin,
           credit_and_grade_input);  // personal note: originally used std::cin
@@ -70,7 +68,7 @@ int main() {
         }
 
       } else {
-        std::cout
+        std::cout << current_credits << "here\n" 
             << "ERROR: Invalid Credits\nPlease check your input. Make sure the "
                "number of credits and letter grade weren't swapped and "
                "re-enter according to the instructions.\n\n";
@@ -142,6 +140,7 @@ int main() {
     // declares variable that accests users response to adding another course
     std::string add_another_course = "";
     std::cin >> add_another_course;
+    std::cin.ignore();
     // makes response case insensetive
     std::transform(add_another_course.begin(), add_another_course.end(),
                    add_another_course.begin(),
