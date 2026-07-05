@@ -32,12 +32,14 @@ You will create/complete:
 All files must compile together with **separate compilation**
 Each `.cpp`file compiles into its own object file, and they get linked together.
 
+**NOTE**: We will write the constructor and desctructor in class together on July 6th!
+
 ## Compiling
 
 ```
 g++ -std=c++17 -Wall -c Dice.cpp -o Dice.o
 g++ -std=c++17 -Wall -c Snake.cpp -o Snake.o
 g++ -std=c++17 -Wall -c main.cpp -o main.o
-g++ Dice.o Snake.o main.o -o kill_the_snake
+g++ Dice.o Snake.o main.o -o game
 ```
 
