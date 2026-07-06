@@ -1,0 +1,12 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int number = 42;
+    int* pointer = &number;
+
+    cout << "Value of number: " << number << endl;
+    cout << "Adress of number: " << pointer << endl;
+    cout << "Value through pointer: " << *pointer << endl;
+
+}

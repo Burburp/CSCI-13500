@@ -24,7 +24,7 @@ void removeCopies(std::vector<int>& data) {
 }
 
 void isAnagram(std::string officer_name, std::string spy_name) {
-  std::vector<int> officer_letter_counts(26);
+  std::vector<int> officer_letter_counts(4);
   std::vector<int> anagram_letter_counts(26);
   //Time complexity is O(n) since the longest scaling operation is the for loop
   //which has to go through every character in a string
