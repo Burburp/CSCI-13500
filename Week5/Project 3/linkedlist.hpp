@@ -11,7 +11,9 @@ class LinkedList {
   void InsertNode(const int value);
   void InsertNodeFront(const int val);
   bool Contains(const int value) const;
-  bool Remove(const int value);
+  bool Remove(const int position);
+  void Print_Values() const;
+  void Print_Addresses() const;
   ~LinkedList();
 
   private:

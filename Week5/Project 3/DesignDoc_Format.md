@@ -29,7 +29,7 @@ LinkedList Class Functions:
 
 InsertNode has a time complexity of O(n) as it will have to go through the whole list to add an element. Though it can be reduced to O(1) if LinkedList Class tracked the tail of the list.
 
-InsertNodeHead has a time complexity of O(1) as it can direct access the head of the list and add a new element before it
+InsertNodeFront has a time complexity of O(1) as it can direct access the head of the list and add a new element before it
 
 ~Linked List has a time complexity of O(n) because it has to go through all elements to delete them
 
