@@ -6,9 +6,11 @@ void LinkedList::InsertNode(const int value) {
   Node* address = new Node();
   address->value = value;
   address->next = nullptr;
+  // testing cout
   std::cout << "Insert node working\n";
   if (head_ == nullptr) {
     head_ = address;
+    // testing cout
     std::cout << "The head: " << head_ << std::endl;
 
   } else {
@@ -18,6 +20,7 @@ void LinkedList::InsertNode(const int value) {
       current_node = current_node->next;
     }
     current_node->next = address;
+    // testing cout
     std::cout << "Address of second to last node" << current_node << std::endl;
     std::cout << "Address of next in second to last node: "
               << current_node->next << std::endl;
@@ -28,9 +31,11 @@ void LinkedList::InsertNode(const int value) {
 void LinkedList::InsertNodeFront(const int value) {
   Node* new_node = new Node();
   new_node->value = value;
+  // testing cout
   std::cout << "Head_adress" << head_ << std::endl;
   new_node->next = head_;
   head_ = new_node;
+  // testing cout
   std::cout << "New Head Address: " << head_ << std::endl
             << "New Next: " << head_->next << std::endl;
 
@@ -47,6 +52,46 @@ bool LinkedList::Contains(const int value) const {
   }
   return false;
 }
+
+bool LinkedList::Remove(const int position) {
+  // 1-based position so positions below 1 is out of bounds
+  if (position > size_ || position < 1 || head_ == nullptr) {
+    return false;
+  }
+
+  Node* current_address = head_;
+
+  // If user chooses to delete head
+  // updates head to prevent memory leak
+  if (position == 1) {
+    current_address = head_->next;
+    delete head_;
+    head_ = current_address;
+    return true;
+  }
+
+  //Uses previous node to connect it to the node after the deleted one
+  int before_position = position - 1;
+  Node* before_address = head_;
+
+  // grabs target position address and position before it
+  // for relinking
+  for (int current_position = 2; current_position <= position;
+       current_position++) {
+    current_address = current_address->next;
+
+    if (current_position == before_position) {
+      before_address = current_address;
+    }
+  }
+  
+  before_address->next = current_address->next;
+  delete current_address;
+
+  size_--;
+  return true;
+}
+
 
 LinkedList::~LinkedList() {
   Node* current_node = head_;
@@ -67,6 +112,7 @@ int main() {
   first_list.InsertNodeFront(18);
   bool value_in2 = first_list.Contains(15);
   bool value_in3 = first_list.Contains(3);
+  // testing cout Contains function
   std::cout << "value_in1 expected value false. Actual: " << value_in1
             << "\nvalue_in2 expected value true. Actual: " << value_in2
             << "\nvalue_in3 expected value false. Actual: " << value_in3
