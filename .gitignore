@@ -9,4 +9,8 @@
 !*.hpp
 !Makefile
 !*.md
+<<<<<<< HEAD
 !*.pdf
+=======
+.gitignore
+>>>>>>> upstream/main
