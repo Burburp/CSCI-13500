@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 int main() {
+  
   int three_by_three[3][3] = {};
   int six_by_six[6][6] = {};
   int num_of_cols = sizeof(three_by_three[0]) / sizeof(three_by_three[0][0]);
@@ -134,9 +135,7 @@ int main() {
 
   // the vector that will be added
   std::vector<std::vector<int>> vector3x3 = {
-      {9, -3, -4}, 
-      {5, 7, 13},
-      {-1, 4, 3}};
+      {9, -3, -4}, {5, 7, 13}, {-1, 4, 3}};
 
   num_of_cols = vector3x3[0].size();
   std::vector<std::vector<int>> added_matrix(2,
