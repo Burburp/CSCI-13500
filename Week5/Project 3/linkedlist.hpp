@@ -12,8 +12,12 @@ class LinkedList {
   void InsertNodeFront(const int val);
   bool Contains(const int value) const;
   bool Remove(const int position);
-  void Print_Values() const;
-  void Print_Addresses() const;
+  void PrintValues() const;
+  void PrintAddresses() const;
+  int GetValueAtPosition(const int position) const;
+  LinkedList* ReverseList();
+  void InsertNodeAt(const int value, const int position);
+  int GetSize() const;
   ~LinkedList();
 
   private:
