@@ -68,7 +68,8 @@ int main() {
         }
 
       } else {
-        std::cout << current_credits << "here\n" 
+        std::cout
+            << current_credits << "here\n"
             << "ERROR: Invalid Credits\nPlease check your input. Make sure the "
                "number of credits and letter grade weren't swapped and "
                "re-enter according to the instructions.\n\n";
