@@ -13,7 +13,7 @@ int main()
     int score = 10;
     int bonus = 5;
 
-    investigate(nullptr, bonus);
+    investigate(score, bonus);
 
     std::cout << score << " " << bonus << std::endl;
 }
