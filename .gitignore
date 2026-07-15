@@ -3,11 +3,12 @@
 # Do not ignore directories
 !*/
 # Explicitly whitelist your source files so Git tracks them
-!*.c
 !*.cpp
 !*.h
 !*.hpp
 !Makefile
 !*.md
 !*.pdf
+!*.txt
+!*.csv
 .gitignore
