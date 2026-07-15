@@ -1,12 +1,12 @@
 #include <iostream>
-using namespace std;
 
 int main() {
     int number = 42;
     int* pointer = &number;
 
-    cout << "Value of number: " << number << endl;
-    cout << "Adress of number: " << pointer << endl;
-    cout << "Value through pointer: " << *pointer << endl;
+    std::cout << "Value of number: " << number << std::endl;
+    std::cout << "Adress of number: " << pointer << std::endl;
+    std::cout << "Value through pointer: " << *pointer << std::endl;
+    return 0;
 
 }
