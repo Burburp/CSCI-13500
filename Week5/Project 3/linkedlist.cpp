@@ -69,9 +69,7 @@ bool LinkedList::Contains(const int value) const {
   return false;
 }
 
-/**
- *
- */
+
 bool LinkedList::Remove(const int position) {
   // 1-based position so positions below 1 is out of bounds
   if (position > size_ || position < 1 || head_ == nullptr) {
@@ -166,7 +164,6 @@ int LinkedList::GetValueAtPosition(int position) const {
   return target_value;
 }
 void LinkedList::InsertNodeAt(const int value, const int position) {
-
   // Node can be inserted in a position after
   // the existing final node.
   int upper_bound_of_insertion = size_ + 1;
@@ -179,11 +176,10 @@ void LinkedList::InsertNodeAt(const int value, const int position) {
 
   if (position == 1) {
     Node* insert_node = new Node;
-    insert_node -> value = value;
+    insert_node->value = value;
     insert_node->next = head_;
     head_ = insert_node;
   } else {
-
     // The prior node address and its -> next address
     // alows the new node to be placed between nodes
     Node* prev_node = head_;
@@ -195,7 +191,7 @@ void LinkedList::InsertNodeAt(const int value, const int position) {
       }
       prev_node = prev_node->next;
     }
-    
+
     if (!prev_node) {
       throw std::runtime_error("Error: List Ended Unexpectedly Early");
     }
@@ -214,6 +210,24 @@ void LinkedList::InsertNodeAt(const int value, const int position) {
 
 int LinkedList::GetSize() const { return size_; }
 
+LinkedList* LinkedList::ReverseList() {
+  LinkedList* new_list = nullptr;
+  Node* prev_node = nullptr;
+  Node* curr_node = head_;
+
+  // Had to google this
+  // Its basically how the node destruction works
+  // But with one more pointer
+  while (curr_node) {
+    Node* next_node = curr_node->next;
+    curr_node->next = prev_node;
+    prev_node = curr_node;
+    curr_node = next_node;
+  }
+  new_list->head_ = prev_node;
+  this->~LinkedList();
+}
+
 LinkedList::~LinkedList() {
   Node* current_node = head_;
   while (current_node) {
@@ -224,56 +238,3 @@ LinkedList::~LinkedList() {
   head_ = nullptr;
 }
 
-int main() {
-  LinkedList first_list;
-
-  // Attempt to remove position in empty list
-  bool did_delete = first_list.Remove(3);
-  bool did_delete2 = first_list.Remove(1);
-  std::cout << "did_delete: " << did_delete << " did_delete2 " << did_delete2
-            << std::endl;
-  // check for a value in an empty list
-  bool value_in1 = first_list.Contains(15);
-
-  // add a few values to list
-  first_list.InsertNode(13);
-  first_list.InsertNode(15);
-  first_list.InsertNode(18);
-  // add value to front of list
-  first_list.InsertNodeFront(18);
-
-  // check for a value that exists and one that doesnt using Contains
-  bool value_in2 = first_list.Contains(15);
-  bool value_in3 = first_list.Contains(3);
-  // testing cout Contains function
-  std::cout << "value_in1 expected value false. Actual: " << value_in1
-            << "\nvalue_in2 expected value true. Actual: " << value_in2
-            << "\nvalue_in3 expected value false. Actual: " << value_in3
-            << std::endl;
-  // Check if list matches with earlier changes
-  first_list.PrintValues();
-  first_list.PrintAddresses();
-
-  // remove a value that does exist and check changes
-  bool did_delete3 = first_list.Remove(3);
-  first_list.PrintValues();
-  std::cout << "did_delete3: " << did_delete3 << std::endl;
-
-  int size_1 = first_list.GetSize();
-  std::cout << size_1 << std::endl;
-  try {
-    std::cout << first_list.GetValueAtPosition(3) << std::endl
-              << first_list.GetValueAtPosition(4) << std::endl;
-  } catch (const std::runtime_error& error_message) {
-    std::cout << error_message.what() << std::endl;
-  }
-  first_list.InsertNodeAt(37, 4);
-  first_list.InsertNodeAt(23, 3);
-  first_list.InsertNodeAt(1, 1);
-  try {
-    first_list.InsertNodeAt(9, 8);
-  } catch (std::runtime_error& error_message) {
-    std::cout << error_message.what() << std::endl;
-  }
-  first_list.PrintValues();
-}
