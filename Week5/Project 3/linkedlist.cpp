@@ -225,7 +225,12 @@ LinkedList* LinkedList::ReverseList() {
     curr_node = next_node;
   }
   new_list->head_ = prev_node;
-  this->~LinkedList();
+  // This was added after submission
+  // Realized there was no return
+  // and the destructor destroyed the head and object
+  new_list -> size_ = this -> size_;
+  this -> head_ = nullptr;
+  return new_list;
 }
 
 LinkedList::~LinkedList() {
